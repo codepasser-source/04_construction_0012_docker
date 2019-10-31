@@ -13,4 +13,4 @@ docker run \
 	-e LDAP_SERVER=ldap://172.16.20.121:389 \
 	-e LDAP_ACCOUNTBASE=dc=codepasser,dc=io \
 	-v $HOME/gerrit/volume/data/:/var/gerrit/review_site \
-	-d joker/gerrit
+	-d codepasser/gerrit

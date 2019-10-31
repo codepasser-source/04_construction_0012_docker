@@ -1,2 +1,2 @@
 # docker build [OPTIONS] PATH | URL | -
-docker build -f ./build/Dockerfile -t joker/phpldapadmin .
+docker build -f ./build/Dockerfile -t codepasser/phpldapadmin .

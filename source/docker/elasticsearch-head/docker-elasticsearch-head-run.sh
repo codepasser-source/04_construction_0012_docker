@@ -2,4 +2,4 @@
 docker run \
 	--name elasticsearch-head \
 	-p 9100:9100 \
-	-d joker/elasticsearch-head
+	-d codepasser/elasticsearch-head

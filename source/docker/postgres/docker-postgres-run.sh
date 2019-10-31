@@ -6,4 +6,4 @@ docker run \
 	-e POSTGRES_PASSWORD=Sa*963.-+ \
 	-e POSTGRES_DB=postgres \
 	-v $HOME/postgres/volume/data/:/var/lib/postgresql/data \
-	-d joker/postgres
+	-d codepasser/postgres

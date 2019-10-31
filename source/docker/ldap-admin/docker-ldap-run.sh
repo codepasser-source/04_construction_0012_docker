@@ -3,4 +3,4 @@ docker run \
 	--name ldap-admin \
 	-p 6443:443 \
 	-e PHPLDAPADMIN_LDAP_HOSTS=172.16.20.121 \
-	-d joker/phpldapadmin
+	-d codepasser/phpldapadmin

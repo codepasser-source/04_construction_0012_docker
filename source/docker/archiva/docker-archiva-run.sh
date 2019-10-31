@@ -9,4 +9,4 @@ docker run \
 	-e DB_PASS="archiva_pw" \
 	-e USERS_DB_NAME="archiva" \
 	-v $HOME/archiva/volume/data/:/archiva-data \
-	-d joker/archiva
+	-d codepasser/archiva

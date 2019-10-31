@@ -4,4 +4,4 @@ docker run \
 	-p 2181:2181 \
 	-v $HOME/zookeeper/volume/conf/zoo.cfg:/conf/zoo.cfg \
 	-v $HOME/zookeeper/volume/data/:/data \
-	-d joker/zookeeper
+	-d codepasser/zookeeper

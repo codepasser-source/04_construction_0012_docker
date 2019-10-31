@@ -1,2 +1,2 @@
 # docker rmi [OPTIONS] IMAGE [IMAGE...]
-docker rmi -f joker/openldap
+docker rmi -f codepasser/openldap

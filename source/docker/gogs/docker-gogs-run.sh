@@ -6,4 +6,4 @@ docker run \
 	-p 10022:22 \
 	-p 7001:3000 \
 	-v $HOME/gogs/volume/data/:/data \
-	-d joker/gogs
+	-d codepasser/gogs

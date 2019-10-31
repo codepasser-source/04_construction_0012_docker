@@ -1,2 +1,2 @@
 #  docker rmi [OPTIONS] IMAGE [IMAGE...]
-docker rmi -f joker/mongo
+docker rmi -f codepasser/mongo

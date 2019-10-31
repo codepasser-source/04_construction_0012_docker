@@ -1,2 +1,2 @@
 # docker rmi [OPTIONS] IMAGE [IMAGE...]
-docker rmi -f joker/mysql
+docker rmi -f codepasser/mysql

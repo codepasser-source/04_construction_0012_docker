@@ -1,2 +1,2 @@
 # docker build [OPTIONS] PATH | URL | -
-docker build -f ./build/Dockerfile -t joker/mysql .
+docker build -f ./build/Dockerfile -t codepasser/mysql .

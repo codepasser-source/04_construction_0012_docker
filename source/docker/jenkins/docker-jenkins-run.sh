@@ -4,4 +4,4 @@ docker run \
 	-p 8081:8080 \
 	-p 50000:50000 \
 	-v $HOME/jenkins/volume/data/:/var/jenkins_home \
-	-d joker/jenkins
+	-d codepasser/jenkins

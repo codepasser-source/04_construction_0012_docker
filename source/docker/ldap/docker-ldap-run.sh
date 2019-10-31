@@ -9,4 +9,4 @@ docker run \
 	-e LDAP_TLS=false \
 	-v $HOME/ldap/volume/data:/var/lib/ldap \
 	-v $HOME/ldap/volume/conf:/etc/ldap/slapd.d \
-	-d joker/openldap
+	-d codepasser/openldap

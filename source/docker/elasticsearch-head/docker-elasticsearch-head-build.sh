@@ -1,2 +1,2 @@
 # docker build [OPTIONS] PATH | URL | -
-docker build -f ./build/Dockerfile -t joker/elasticsearch-head .
+docker build -f ./build/Dockerfile -t codepasser/elasticsearch-head .

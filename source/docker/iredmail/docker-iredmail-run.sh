@@ -15,4 +15,4 @@ docker run --privileged \
 	-v $HOME/iredmail/volume/data/mysql:/var/lib/mysql \
 	-v $HOME/iredmail/volume/data/vmail:/var/vmail \
 	-v $HOME/iredmail/volume/data/clamav:/var/lib/clamav \
-	-d joker/iredmail
+	-d codepasser/iredmail

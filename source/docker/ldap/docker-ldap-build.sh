@@ -1,2 +1,2 @@
 # docker build [OPTIONS] PATH | URL | -
-docker build -f ./build/Dockerfile -t joker/openldap .
+docker build -f ./build/Dockerfile -t codepasser/openldap .

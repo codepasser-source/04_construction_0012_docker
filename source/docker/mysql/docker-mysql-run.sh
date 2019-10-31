@@ -5,4 +5,4 @@ docker run \
 	-e MYSQL_ROOT_PASSWORD=Sa*963.-+ \
 	-v $HOME/mysql/volume/conf:/etc/mysql/conf.d \
 	-v $HOME/mysql/volume/data:/var/lib/mysql \
-	-d joker/mysql
+	-d codepasser/mysql

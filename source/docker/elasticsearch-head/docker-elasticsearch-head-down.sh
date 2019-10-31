@@ -1,2 +1,2 @@
 #  docker rmi [OPTIONS] IMAGE [IMAGE...]
-docker rmi -f joker/elasticsearch-head
+docker rmi -f codepasser/elasticsearch-head
