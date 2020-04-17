@@ -1,3 +1,4 @@
+#!/bin/bash
 # docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
 docker exec -it mongo-master mongo admin
 ## execute create user
