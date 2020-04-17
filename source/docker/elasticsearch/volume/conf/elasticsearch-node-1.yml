@@ -13,3 +13,4 @@ discovery.zen.ping.unicast.hosts: ["172.16.20.121:9301","172.16.20.121:9302","17
 discovery.zen.minimum_master_nodes: 2
 bootstrap.memory_lock: false
 bootstrap.system_call_filter: false
+cluster.initial_master_nodes: ["codepasser-node-1","codepasser-node-2"]

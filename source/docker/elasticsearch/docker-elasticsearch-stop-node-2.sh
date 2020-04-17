@@ -1,3 +1,4 @@
+#!/bin/bash
 #  docker stop [OPTIONS] CONTAINER [CONTAINER...]
 docker stop elasticsearch-node-2
 # docker rm [OPTIONS] CONTAINER [CONTAINER...]
