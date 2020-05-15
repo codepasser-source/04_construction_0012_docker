@@ -1,0 +1,17 @@
+filebeat.config:
+  modules:
+    path: ${path.config}/modules.d/*.yml
+    reload.enabled: false
+
+processors:
+  - add_cloud_metadata: ~
+  - add_docker_metadata: ~
+
+filebeat.inputs:
+  - type: log
+    paths:
+      - /data/program/capital/capital-attestation/attestation-cloud-configuration/logs/*.out
+
+output.logstash:
+  hosts: ["172.16.20.121:5044"]
+  loadbalance: true
