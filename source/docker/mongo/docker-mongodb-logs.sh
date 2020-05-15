@@ -1,3 +1,3 @@
 #!/bin/bash
 # docker logs [OPTIONS] CONTAINER
-docker logs mongo-master
+docker logs -f mongo-master

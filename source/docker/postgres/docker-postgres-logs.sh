@@ -1,2 +1,2 @@
 # docker logs [OPTIONS] CONTAINER
-docker logs postgres-master
+docker logs -f postgres-master

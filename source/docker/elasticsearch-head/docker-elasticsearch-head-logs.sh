@@ -1,2 +1,2 @@
 # docker logs [OPTIONS] CONTAINER
-docker logs elasticsearch-head
+docker logs -f elasticsearch-head

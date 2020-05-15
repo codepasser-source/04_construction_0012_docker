@@ -1,3 +1,3 @@
 #!/bin/bash
 # docker logs [OPTIONS] CONTAINER
-docker logs redis-master
+docker logs -f redis-master

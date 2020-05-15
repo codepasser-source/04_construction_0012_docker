@@ -1,2 +1,2 @@
 # docker logs [OPTIONS] CONTAINER
-docker logs rabbitmq-master
+docker logs -f rabbitmq-master

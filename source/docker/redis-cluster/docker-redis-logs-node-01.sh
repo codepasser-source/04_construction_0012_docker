@@ -1,3 +1,3 @@
 #!/bin/bash
 # docker logs [OPTIONS] CONTAINER
-docker logs redis-node-01
+docker logs -f redis-node-01

@@ -1,3 +1,3 @@
 #!/bin/bash
 # docker logs [OPTIONS] CONTAINER
-docker logs redis-single
+docker logs -f redis-single

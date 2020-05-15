@@ -1,2 +1,2 @@
 # docker logs [OPTIONS] CONTAINER
-docker logs gogs-master
+docker logs -f gogs-master

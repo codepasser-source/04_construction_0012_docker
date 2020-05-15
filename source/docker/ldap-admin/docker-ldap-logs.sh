@@ -1,2 +1,2 @@
 # docker logs [OPTIONS] CONTAINER
-docker logs ldap-admin
+docker logs -f ldap-admin

@@ -1,2 +1,2 @@
 # docker logs [OPTIONS] CONTAINER
-docker logs iredmail-master
+docker logs -f iredmail-master

@@ -1,2 +1,2 @@
 # docker logs [OPTIONS] CONTAINER
-docker logs archiva-master
+docker logs -f archiva-master

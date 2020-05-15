@@ -1,2 +1,2 @@
 # docker logs [OPTIONS] CONTAINER
-docker logs zookeeper-master
+docker logs -f zookeeper-master
