@@ -10,7 +10,12 @@ processors:
 filebeat.inputs:
   - type: log
     paths:
-      - /data/program/capital/capital-attestation/attestation-cloud-configuration/logs/*.out
+      - /data/program/capital/capital-attestation/attestation-web-oauth/logs/web-oauth/*.log
+    tags: ["web-oauth"]
+  - type: log
+    paths:
+      - /data/program/capital/capital-attestation/attestation-base-service/logs/service-base/*.log
+    tags: ["service-base"]
 
 output.logstash:
   hosts: ["172.16.20.121:5044"]
