@@ -12,10 +12,16 @@ filebeat.inputs:
     paths:
       - /data/program/capital/capital-attestation/attestation-web-oauth/logs/web-oauth/*.log
     tags: ["web-oauth"]
+    json.keys_under_root: true
+    json.overwrite_keys: true
+    json.add_error_key: true
   - type: log
     paths:
       - /data/program/capital/capital-attestation/attestation-base-service/logs/service-base/*.log
     tags: ["service-base"]
+    json.keys_under_root: true
+    json.overwrite_keys: true
+    json.add_error_key: true
 
 output.logstash:
   hosts: ["172.16.20.121:5044"]
