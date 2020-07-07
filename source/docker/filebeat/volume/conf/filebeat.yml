@@ -10,6 +10,11 @@ processors:
 filebeat.inputs:
   - type: log
     paths:
+      - /data/program/capital/capital-attestation/attestation-web-api/logs/web-api/*.log
+    tags: ["web-api"]
+    json.overwrite_keys: true
+  - type: log
+    paths:
       - /data/program/capital/capital-attestation/attestation-web-oauth/logs/web-oauth/*.log
     tags: ["web-oauth"]
     json.overwrite_keys: true
