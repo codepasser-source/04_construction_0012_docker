@@ -10,17 +10,17 @@ processors:
 filebeat.inputs:
   - type: log
     paths:
-      - /data/program/capital/capital-attestation/attestation-web-api/logs/web-api/*.log
+      - /data/program/codepasser/daemon/daemon-web-api/logs/web-api/*.log
     tags: ["web-api"]
     json.overwrite_keys: true
   - type: log
     paths:
-      - /data/program/capital/capital-attestation/attestation-web-oauth/logs/web-oauth/*.log
+      - /data/program/codepasser/daemon/daemon-web-oauth/logs/web-oauth/*.log
     tags: ["web-oauth"]
     json.overwrite_keys: true
   - type: log
     paths:
-      - /data/program/capital/capital-attestation/attestation-base-service/logs/service-base/*.log
+      - /data/program/codepasser/daemon/daemon-base-service/logs/service-base/*.log
     tags: ["service-base"]
     json.overwrite_keys: true
 
