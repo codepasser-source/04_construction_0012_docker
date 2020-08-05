@@ -1,5 +1,5 @@
 #!/bin/bash
 #  docker stop [OPTIONS] CONTAINER [CONTAINER...]
-docker stop mongo-master
+docker stop mongo-single
 # docker rm [OPTIONS] CONTAINER [CONTAINER...]
-docker rm mongo-master
+docker rm mongo-single

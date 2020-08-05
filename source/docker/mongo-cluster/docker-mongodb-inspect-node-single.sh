@@ -1,3 +1,3 @@
 #!/bin/bash
 # docker inspect [OPTIONS] NAME|ID [NAME|ID...]
-docker inspect mongo-master
+docker inspect mongo-single
