@@ -1,8 +1,8 @@
 docker exec -it mongo-mongos-01 mongo
+use admin
 # Creation root administrator
 db.createUser({ user: 'root', pwd: 'Sa*963.-+', roles: [ { role: "root", db: "admin" } ] });
 # Creation admin administrator
-use admin
 db.createUser({
     user:'admin',pwd:'Sa*963.-+',
     roles:[
