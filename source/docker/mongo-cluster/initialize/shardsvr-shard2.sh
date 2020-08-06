@@ -1,4 +1,4 @@
-docker exec -it mongo-shardsvr-21 mongo
+docker exec -it mongo-shardsvr-22 mongo
 config = {
     "_id":"shard2",
     "members":[
