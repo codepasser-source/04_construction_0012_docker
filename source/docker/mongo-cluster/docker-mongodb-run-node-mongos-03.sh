@@ -7,4 +7,5 @@ docker run \
   -v /data/docker/mongo/volume/configdb/node-mongos-03/:/data/configdb \
   -v /data/docker/mongo/volume/data/node-mongos-03:/data/db \
   -d codepasser/mongo \
+  mongos \
   --config /etc/mongo/mongod.conf
