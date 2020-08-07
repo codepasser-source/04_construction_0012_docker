@@ -3,7 +3,7 @@ sh.enableSharding("daemon")
 # Creation collection
 db.createCollection("book")
 # Creation shard hashed
-sh.shardCollection("daemon.book", {bookId:"hashed"}, false, { numInitialChunks: 4} )
+sh.shardCollection("daemon.book", {bookId:"hashed"}, false, { numInitialChunks: 3} )
 var cnt = 0;
 # Insert 1w records
 for(var i=0; i<100; i++){
