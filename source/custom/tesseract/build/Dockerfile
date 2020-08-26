@@ -16,7 +16,7 @@ RUN mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backu
 RUN curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-8.repo
 RUN yum clean all; yum makecache; yum -y update
 # Fontconfig
-RUN yum -y install fontconfig
+RUN yum -y install fontconfig git
 # A compiler for C and C++: GCC or Clang
 RUN yum -y install make gcc gcc-c++
 # GNU Autotools: autoconf, automake, libtool
