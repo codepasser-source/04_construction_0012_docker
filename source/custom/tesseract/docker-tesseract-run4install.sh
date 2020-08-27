@@ -6,4 +6,4 @@ docker run \
   -v /data/docker/tesseract/volume/data/tesseract:/usr/local/lib/tesseract \
   -v /data/docker/tesseract/volume/data/tessdata:/usr/local/share/tessdata \
   -v /data/docker/tesseract/volume/data/tesstrain:/usr/local/share/tesstrain \
-  -d codepasser/tesseract-training
+  -d codepasser/tesseract-training:centos8

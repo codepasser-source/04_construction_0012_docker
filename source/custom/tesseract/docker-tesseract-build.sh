@@ -1,3 +1,3 @@
 #!/bin/bash
 # docker build [OPTIONS] PATH | URL | -
-docker build -f ./build/Dockerfile -t codepasser/tesseract-centos8 .
+docker build -f ./build/Dockerfile -t codepasser/tesseract-training:centos8 .

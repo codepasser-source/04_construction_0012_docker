@@ -1,5 +1,5 @@
 #!/bin/bash
 # docker stop [OPTIONS] CONTAINER [CONTAINER...]
-docker stop tesseract-centos8
+docker stop tesseract-training
 # docker rm [OPTIONS] CONTAINER [CONTAINER...]
-docker rm tesseract-centos8
+docker rm tesseract-training
