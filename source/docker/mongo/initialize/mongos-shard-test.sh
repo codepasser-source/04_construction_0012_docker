@@ -28,6 +28,7 @@ for(var i=0; i<100; i++){
       db.book.insertMany(dl);
       print("insert ", cnt);
 }
-
+# 查看文档数量
+db.book.find().count();
 # 查看分片状态
 db.book.getShardDistribution()
