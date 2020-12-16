@@ -19,9 +19,9 @@ docker exec -it mongo-mongos-03 mongo admin -u admin -p Sa*963.-+
 docker exec -it mongo-mongos-03 mongo daemon -u daemon -p cde3VFR$
 
 # configsvr-01
-docker exec -it mongo-mongos-01 mongo
-docker exec -it mongo-mongos-02 mongo
-docker exec -it mongo-mongos-03 mongo
+docker exec -it mongo-configsvr-01 mongo
+docker exec -it mongo-configsvr-02 mongo
+docker exec -it mongo-configsvr-03 mongo
 
 # shardsvr-1
 docker exec -it mongo-shardsvr-11 mongo
