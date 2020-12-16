@@ -31,4 +31,6 @@ for(var i=0; i<100; i++){
 # 查看文档数量
 db.book.find().count();
 # 查看分片状态
-db.book.getShardDistribution()
+db.book.getShardDistribution();
+# 删除测试数据
+db.book.drop();
