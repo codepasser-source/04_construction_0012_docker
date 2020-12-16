@@ -12,5 +12,5 @@ db.createUser({
         {role:'readWriteAnyDatabase',db:'admin'}
 ]});
 # Creation project db user
-user daemon;
+use daemon;
 db.createUser({ user: 'daemon', pwd: 'cde3VFR$', roles: [ { role: "readWrite", db: "daemon" } ] });
