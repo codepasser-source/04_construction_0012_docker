@@ -4,8 +4,8 @@ sh.enableSharding("daemon")
 db.createCollection("sys_area")
 db.createCollection("sys_user_attribute")
 # Creation shard hashed
-sh.shardCollection("daemon.sys_area", {code:"hashed"}, false, { numInitialChunks: 3} )
-sh.shardCollection("daemon.sys_user_attribute", {userId:"hashed"}, false, { numInitialChunks: 3} )
+sh.shardCollection("daemon.sys_area", {_id:"hashed"}, false, { numInitialChunks: 3} )
+sh.shardCollection("daemon.sys_user_attribute", {_id:"hashed"}, false, { numInitialChunks: 3} )
 
 # 查看分片状态
 db.sys_area.getShardDistribution()
