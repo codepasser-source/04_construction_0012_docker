@@ -1,0 +1,13 @@
+#
+# Copyright codepasser.io. All Rights Reserved.
+#
+version: '2.0'
+
+services:
+  codepasser-mysql:
+    build:
+      dockerfile: ../build/mysql/Dockerfile
+      context: .
+    image: codepasser/mysql:${IMAGE_TAG}
+    environment:
+      - MYSQL_ROOT_PASSWORD=Sa*963.-+

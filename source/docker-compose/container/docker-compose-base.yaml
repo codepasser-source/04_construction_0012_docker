@@ -1,0 +1,17 @@
+#
+# Copyright codepasser.io. All Rights Reserved.
+#
+version: '2.0'
+
+services:
+  mysql.codepasser.io:
+    container_name: mysql.codepasser.io
+    extends:
+      file: ./mysql.yaml
+      service: codepasser-mysql
+    volumes:
+      - ../volume/mysql/conf:/etc/mysql/conf.d
+      - mysql.codepasser.io:/var/lib/mysql
+    ports:
+      - 3306:3306
+

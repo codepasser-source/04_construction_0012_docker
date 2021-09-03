@@ -1,0 +1,19 @@
+#
+# Copyright codepasser.io. All Rights Reserved.
+#
+version: '2.0'
+
+volumes:
+  mysql.codepasser.io:
+
+networks:
+  devops:
+
+services:
+  mysql.codepasser.io:
+    extends:
+      file: container/docker-compose-base.yaml
+      service: mysql.codepasser.io
+    container_name: mysql.codepasser.io
+    networks:
+      - devops
