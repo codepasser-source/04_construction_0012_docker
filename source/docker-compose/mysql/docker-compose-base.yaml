@@ -10,7 +10,7 @@ services:
       file: mysql-base.yaml
       service: mysql-base
     volumes:
-      - ../volume/mysql/conf:/etc/mysql/conf.d
+      - ./volume/mysql/conf:/etc/mysql/conf.d
       - mysql.codepasser.io:/var/lib/mysql
     ports:
       - 3306:3306

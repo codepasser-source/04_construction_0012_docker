@@ -6,7 +6,7 @@ version: '2.0'
 services:
   mysql-base:
     build:
-      dockerfile: ../build/mysql/Dockerfile
+      dockerfile: ./build/Dockerfile
       context: .
     image: codepasser/mysql:${IMAGE_TAG}
     environment:

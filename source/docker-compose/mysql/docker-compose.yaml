@@ -15,7 +15,7 @@ services:
   mysql.codepasser.io:
     container_name: mysql.codepasser.io
     extends:
-      file: container/docker-compose-base.yaml
+      file: docker-compose-base.yaml
       service: mysql.codepasser.io
     networks:
       - devops
