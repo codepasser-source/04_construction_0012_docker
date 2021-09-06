@@ -8,6 +8,8 @@ volumes:
 
 networks:
   devops:
+    external:
+      name: ${COMPOSE_PROJECT_NAME}_devops
 
 services:
   mysql.codepasser.io:
@@ -17,3 +19,4 @@ services:
       service: mysql.codepasser.io
     networks:
       - devops
+

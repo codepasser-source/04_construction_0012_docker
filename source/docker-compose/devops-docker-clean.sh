@@ -4,8 +4,9 @@
 #
 echo
 echo "##### [devops.codepasser.io] #############################"
-echo "##### Docker container start up ##########################"
+echo "##### Docker container clean up ##########################"
 echo "##########################################################"
+
 docker ps -a
 
 docker images
@@ -14,6 +15,12 @@ docker volume ls
 
 docker network ls
 
-docker exec -it mysql.codepasser.io mysql -uroot -pSa*963.-+
-
 netstat -lnt
+
+docker swarm leave
+
+docker network prune
+
+docker volume prune
+
+docker rmi codepasser/mysql
