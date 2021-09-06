@@ -7,8 +7,8 @@ services:
   mysql.codepasser.io:
     container_name: mysql.codepasser.io
     extends:
-      file: ./mysql.yaml
-      service: codepasser-mysql
+      file: mysql-base.yaml
+      service: mysql-base
     volumes:
       - ../volume/mysql/conf:/etc/mysql/conf.d
       - mysql.codepasser.io:/var/lib/mysql
