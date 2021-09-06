@@ -20,17 +20,18 @@ docker swarm join --token SWMTKN-1-2kke4rbao633z9d554cofss6jvvb8klbvbwq18rn8abdt
 ```shell script
 # 确认节点
 docker node ls
-qje9snr2asbfhcivc611egycl *   orderer.codepasser.com   Ready               Active              Leader              19.03.8
-mdp8sv9xwxbex119cvy59iiws     org1.codepasser.com      Ready               Active                                  19.03.8
-3zwo37g0qo8wsrslj95ndnjxc     org2.codepasser.com      Ready               Active                                  19.03.8
+ID                            HOSTNAME                  STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+lyn7d3h0hxwgr3eyr7062difs *   devops100.codepasser.io   Ready     Active         Leader           20.10.8
+qei15atv8h13dfx5al39zklb9     devops101.codepasser.io   Ready     Active                          20.10.8
 ```
 
 > 创建overlay网络(管理节点操作)
 
 ```shell script
-docker network create --driver overlay fabric_course
-docker network create --driver overlay --attachable fabric_course
-docker network create --driver overlay --attachable --opt encrypted fabric_course
+# 创建overlay网络 允许动态添加（推荐）
+docker network create --driver overlay --attachable codepasser_devops
+# 创建overlay网络 允许动态添加+加密网络
+docker network create --driver overlay --attachable --opt encrypted codepasser_devops
 ```
 
 > 确认网络
@@ -38,29 +39,29 @@ docker network create --driver overlay --attachable --opt encrypted fabric_cours
 ```shell script
 # 管理节点
 docker network ls
-NETWORK ID          NAME                DRIVER              SCOPE
-c47e5e2d6047        bridge              bridge              local
-3eb320cdf258        docker_gwbridge     bridge              local
-aa11911310f3        host                host                local
-i4wkmldt5cdr        ingress             overlay             swarm
-ab566621386b        none                null                local
-tz29whxdqr7p        fabric_course        overlay             swarm
-# 工作节点 暂时看不到fabric_course网络,当容器实例应用负载时才可见
-NETWORK ID          NAME                DRIVER              SCOPE
-19c6b8a93532        bridge              bridge              local
-19d7d62ca00e        docker_gwbridge     bridge              local
-c788d25481a8        host                host                local
-i4wkmldt5cdr        ingress             overlay             swarm
-2e119583b9e7        none                null                local
-tz29whxdqr7p        fabric_course        overlay             swarm
+NETWORK ID     NAME                DRIVER    SCOPE
+9681c63cce7a   bridge              bridge    local
+j3t8t2s0qsnj   codepasser_devops   overlay   swarm
+adca4f09b56b   docker_gwbridge     bridge    local
+4a6994fa805e   host                host      local
+nr4dr3ayr5et   ingress             overlay   swarm
+dc99cdfe3ed3   none                null      local
+# 工作节点 暂时看不到codepasser_devops网络,当容器实例应用负载时才可见
+NETWORK ID     NAME              DRIVER    SCOPE
+b8c0a220e594   bridge            bridge    local
+3255702981c2   docker_gwbridge   bridge    local
+4a6994fa805e   host              host      local
+nr4dr3ayr5et   ingress           overlay   swarm
+dc99cdfe3ed3   none              null      local
 ```
 - [注意]
 
     * 关闭防火墙
     * 手动关闭后需要冲洗docker服务 systemctl restart docker.service 
 
-
 > 验证网络
+
+- [注] 确认宿主机DNS映射
 
 ```shell script
 docker pull busybox
@@ -68,19 +69,19 @@ docker pull busybox
 # 管理节点启动(172.16.120.100)
 docker run -itd \
         --name c1 \
-        --network fabric_course \
+        --network codepasser_devops \
         busybox
 
 # 工作节点启动(172.16.120.101)
 docker run -itd \
         --name c2 \
-        --network fabric_course \
+        --network codepasser_devops \
         busybox
 
 # 工作节点启动(172.16.120.102)
 docker run -itd \
         --name c3 \
-        --network fabric_course \
+        --network codepasser_devops \
         busybox
 
 # 查看启动结果

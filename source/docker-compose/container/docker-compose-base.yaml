@@ -4,24 +4,13 @@
 version: '2.0'
 
 services:
-  mysql0.devops100.codepasser.io:
-    container_name: mysql0.devops100.codepasser.io
+  mysql.codepasser.io:
+    container_name: mysql.codepasser.io
     extends:
       file: mysql-base.yaml
       service: mysql-base
     volumes:
       - ../volume/mysql/conf:/etc/mysql/conf.d
-      - mysql0.devops100.codepasser.io:/var/lib/mysql
-    ports:
-      - 3306:3306
-
-  mysql1.devops101.codepasser.io:
-    container_name: mysql1.devops101.codepasser.io
-    extends:
-      file: mysql-base.yaml
-      service: mysql-base
-    volumes:
-      - ../volume/mysql/conf:/etc/mysql/conf.d
-      - mysql1.devops101.codepasser.io:/var/lib/mysql
+      - mysql.codepasser.io:/var/lib/mysql
     ports:
       - 3306:3306
