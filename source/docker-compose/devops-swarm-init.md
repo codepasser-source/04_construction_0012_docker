@@ -78,12 +78,6 @@ docker run -itd \
         --network codepasser_devops \
         busybox
 
-# 工作节点启动(172.16.120.102)
-docker run -itd \
-        --name c3 \
-        --network codepasser_devops \
-        busybox
-
 # 查看启动结果
 docker ps -a
 
@@ -93,9 +87,6 @@ docker exec -it c1 sh
 
 docker exec c2 ping -c 2 c1
 docker exec -it c2 sh
-
-docker exec c3 ping -c 2 c1
-docker exec -it c3 sh
 ```
 
 > 环境清理
@@ -110,13 +101,6 @@ docker network ls
 
 docker stop c2
 docker rm c2
-docker swarm leave
-docker network rm docker_gwbridge
-docker network ls
-
-
-docker stop c3
-docker rm c3
 docker swarm leave
 docker network rm docker_gwbridge
 docker network ls
