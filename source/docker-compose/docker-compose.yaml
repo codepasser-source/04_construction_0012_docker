@@ -4,16 +4,26 @@
 version: '2.0'
 
 volumes:
-  mysql.codepasser.io:
+  mysql0.devops100.codepasser.io:
+  mysql1.devops101.codepasser.io:
 
 networks:
   devops:
 
 services:
-  mysql.codepasser.io:
+
+  mysql0.devops100.codepasser.io:
+    container_name: mysql0.devops100.codepasser.io
     extends:
       file: container/docker-compose-base.yaml
-      service: mysql.codepasser.io
-    container_name: mysql.codepasser.io
+      service: mysql0.devops100.codepasser.io
+    networks:
+      - devops
+
+  mysql1.devops101.codepasser.io:
+    container_name: mysql1.devops101.codepasser.io
+    extends:
+      file: container/docker-compose-base.yaml
+      service: mysql1.devops101.codepasser.io
     networks:
       - devops
