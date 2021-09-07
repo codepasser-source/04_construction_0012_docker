@@ -4,17 +4,17 @@
 
 ```shell script
 # 管理节点操作
-docker swarm init --advertise-addr 172.16.120.100
+docker swarm init --advertise-addr 8.8.8.100
 ```
 
 ```shell script
 # 工作节点操作
 # 查看工作加入token
 docker swarm join-token worker
-docker swarm join --token SWMTKN-1-2kke4rbao633z9d554cofss6jvvb8klbvbwq18rn8abdt1xvmg-19lovdl5t10abumpdv3kfyb9q 172.16.120.100:2377
+docker swarm join --token SWMTKN-1-2kke4rbao633z9d554cofss6jvvb8klbvbwq18rn8abdt1xvmg-19lovdl5t10abumpdv3kfyb9q 8.8.8.100:2377
 # 查看管理节点身份加入token
 docker swarm join-token manager
-docker swarm join --token SWMTKN-1-2kke4rbao633z9d554cofss6jvvb8klbvbwq18rn8abdt1xvmg-apg5k84m8w81mts8qfat32hm2 172.16.120.100:2377
+docker swarm join --token SWMTKN-1-2kke4rbao633z9d554cofss6jvvb8klbvbwq18rn8abdt1xvmg-apg5k84m8w81mts8qfat32hm2 8.8.8.100:2377
 ```
 
 ```shell script
@@ -66,13 +66,13 @@ dc99cdfe3ed3   none              null      local
 ```shell script
 docker pull busybox
 
-# 管理节点启动(172.16.120.100)
+# 管理节点启动(8.8.8.100)
 docker run -itd \
         --name c1 \
         --network codepasser_devops \
         busybox
 
-# 工作节点启动(172.16.120.101)
+# 工作节点启动(8.8.8.101)
 docker run -itd \
         --name c2 \
         --network codepasser_devops \
