@@ -7,6 +7,17 @@
 #socket		= /var/run/mysqld/mysqld.sock
 #datadir    = /var/lib/mysql
 #log-error	= /var/log/mysql/error.log
+
+# Master-Slave Replication sync
+log-bin=mysql-bin                   #开启log bin
+binlog_format=mixed                 #日志格式
+server-id=2                         #注意:master机器设置了1,这里设置跟master不同的server id
+binlog_expire_logs_seconds=604800   #日志保存时间7天
+binlog-ignore-db=mysql              #忽略mysql数据库
+binlog-ignore-db=information_schema #忽略information_schema数据库
+binlog-ignore-db=performance_schema #忽略performance_schema数据库
+binlog-do-db=daemon                 #需要同步的数据库
+
 # By default we only accept connections from localhost
 #bind-address	= 127.0.0.1
 # Disabling symbolic-links is recommended to prevent assorted security risks
