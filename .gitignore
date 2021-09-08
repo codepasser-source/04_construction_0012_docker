@@ -5,3 +5,4 @@
 *.err
 *.out
 *.log
+/source/*.tar.gz
