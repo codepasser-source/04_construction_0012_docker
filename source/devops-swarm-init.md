@@ -29,9 +29,9 @@ qei15atv8h13dfx5al39zklb9     devops101.codepasser.io   Ready     Active        
 
 ```shell script
 # 创建overlay网络 允许动态添加（推荐）
-docker network create --driver overlay --attachable codepasser_devops
+docker network create --driver overlay --attachable codepasser_overlay
 # 创建overlay网络 允许动态添加+加密网络
-docker network create --driver overlay --attachable --opt encrypted codepasser_devops
+docker network create --driver overlay --attachable --opt encrypted codepasser_overlay
 ```
 
 > 确认网络
@@ -41,12 +41,12 @@ docker network create --driver overlay --attachable --opt encrypted codepasser_d
 docker network ls
 NETWORK ID     NAME                DRIVER    SCOPE
 9681c63cce7a   bridge              bridge    local
-j3t8t2s0qsnj   codepasser_devops   overlay   swarm
+j3t8t2s0qsnj   codepasser_overlay   overlay   swarm
 adca4f09b56b   docker_gwbridge     bridge    local
 4a6994fa805e   host                host      local
 nr4dr3ayr5et   ingress             overlay   swarm
 dc99cdfe3ed3   none                null      local
-# 工作节点 暂时看不到codepasser_devops网络,当容器实例应用负载时才可见
+# 工作节点 暂时看不到codepasser_overlay网络,当容器实例应用负载时才可见
 NETWORK ID     NAME              DRIVER    SCOPE
 b8c0a220e594   bridge            bridge    local
 3255702981c2   docker_gwbridge   bridge    local
@@ -69,13 +69,13 @@ docker pull busybox
 # 管理节点启动(8.8.8.100)
 docker run -itd \
         --name c1 \
-        --network codepasser_devops \
+        --network codepasser_overlay \
         busybox
 
 # 工作节点启动(8.8.8.101)
 docker run -itd \
         --name c2 \
-        --network codepasser_devops \
+        --network codepasser_overlay \
         busybox
 
 # 查看启动结果
