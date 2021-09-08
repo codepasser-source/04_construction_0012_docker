@@ -21,6 +21,6 @@ docker swarm leave
 
 docker network prune
 
-docker volume prune
+docker network prune -f
 
 docker rmi codepasser/mysql

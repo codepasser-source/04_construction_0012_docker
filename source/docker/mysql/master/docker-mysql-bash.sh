@@ -1,3 +1,3 @@
 #!/bin/bash
 # docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
-docker network prune -f
+docker exec -it master.mysql.codepasser.io bash
