@@ -19,7 +19,7 @@ netstat -lnt
 
 docker swarm leave
 
-docker network prune
+docker volume prune -f
 
 docker network prune -f
 
