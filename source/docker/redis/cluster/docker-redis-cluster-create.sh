@@ -1,9 +1,9 @@
 #!/bin/bash
-docker exec -it redis-node-01 redis-cli --cluster create \
-  172.16.20.121:6379 \
-  172.16.20.121:6380 \
-  172.16.20.121:6381 \
-  172.16.20.121:6389 \
-  172.16.20.121:6390 \
-  172.16.20.121:6391 \
+docker exec -it master1.redis.codepasser.io redis-cli --cluster create \
+  master1.redis.codepasser.io:6379 \
+  master2.redis.codepasser.io:6379 \
+  master3.redis.codepasser.io:6379 \
+  slave1.redis.codepasser.io:6380 \
+  slave2.redis.codepasser.io:6380 \
+  slave3.redis.codepasser.io:6380 \
   --cluster-replicas 1
