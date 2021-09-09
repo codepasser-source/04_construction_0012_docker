@@ -19,7 +19,7 @@ binlog-ignore-db=mysql              #忽略mysql数据库
 binlog-ignore-db=information_schema #忽略information_schema数据库
 binlog-ignore-db=performance_schema #忽略performance_schema数据库
 binlog-do-db=daemon                 #需要同步的数据库
-read_only=1                       #配置slave后开启只读模式
+read_only=1                         #配置slave后开启只读模式
 
 # Disabling symbolic-links is default,recommended to prevent assorted security risks
 #skip_symbolic_links=yes
