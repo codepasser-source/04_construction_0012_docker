@@ -8,3 +8,4 @@ rm -rf redis.tar.gz
 tar cvf redis.tar.gz ./redis
 scp -P 10022 redis.tar.gz root@192.168.3.229:/var/data/docker
 scp -P 10122 redis.tar.gz root@192.168.3.229:/var/data/docker
+scp -P 10222 redis.tar.gz root@192.168.3.229:/var/data/docker
