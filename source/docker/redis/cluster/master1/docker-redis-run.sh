@@ -2,7 +2,7 @@
 # docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 docker run \
   --name master1.redis.codepasser.io \
-  --network codepasser_overlay \
+  --net host \
   -p 6379:6379 \
   -v $(pwd)/volume/conf/redis.conf:/usr/local/etc/redis/redis.conf \
   -v master1.redis.codepasser.io:/data \
