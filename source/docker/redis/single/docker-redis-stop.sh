@@ -1,5 +1,5 @@
 #!/bin/bash
 # docker stop [OPTIONS] CONTAINER [CONTAINER...]
-docker stop redis-single
+docker stop single.redis.codepasser.io
 # docker rm [OPTIONS] CONTAINER [CONTAINER...]
-docker rm redis-single
+docker rm single.redis.codepasser.io
