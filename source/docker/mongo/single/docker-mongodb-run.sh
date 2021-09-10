@@ -7,5 +7,6 @@ docker run \
   -e MONGO_INITDB_ROOT_USERNAME=admin \
   -e MONGO_INITDB_ROOT_PASSWORD=Sa*963.-+ \
   -v $(pwd)/volume/config/mongod.conf:/etc/mongo/mongod.conf \
+  -v $(pwd)/volume/configdb:/data/configdb \
   -v single.mongo.codepasser.io:/data/db \
   -d codepasser/mongo --config /etc/mongo/mongod.conf
