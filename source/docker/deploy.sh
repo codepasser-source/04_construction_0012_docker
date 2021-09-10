@@ -10,8 +10,14 @@
 #scp -P 10122 redis.tar.gz root@192.168.3.229:/var/data/docker
 #scp -P 10222 redis.tar.gz root@192.168.3.229:/var/data/docker
 # ElasticSearch
-rm -rf es.tar.gz
-tar cvf es.tar.gz ./elasticsearch
-scp -P 10022 es.tar.gz root@192.168.3.229:/var/data/docker
-scp -P 10122 es.tar.gz root@192.168.3.229:/var/data/docker
-scp -P 10222 es.tar.gz root@192.168.3.229:/var/data/docker
+#rm -rf es.tar.gz
+#tar cvf es.tar.gz ./elasticsearch
+#scp -P 10022 es.tar.gz root@192.168.3.229:/var/data/docker
+#scp -P 10122 es.tar.gz root@192.168.3.229:/var/data/docker
+#scp -P 10222 es.tar.gz root@192.168.3.229:/var/data/docker
+# MongoDB
+rm -rf mongo.tar.gz
+tar cvf mongo.tar.gz ./mongo
+scp -P 10022 mongo.tar.gz root@192.168.3.229:/var/data/docker
+#scp -P 10122 mongo.tar.gz root@192.168.3.229:/var/data/docker
+#scp -P 10222 mongo.tar.gz root@192.168.3.229:/var/data/docker
