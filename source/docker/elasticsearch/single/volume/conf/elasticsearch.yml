@@ -2,8 +2,8 @@ cluster.name: codepasser-single
 node.name: codepasser-node-single
 node.master: true
 node.data: true
-network.host: single.es.codepasser.io
 network.bind_host: 0.0.0.0
+network.host: single.es.codepasser.io
 network.publish_host: single.es.codepasser.io
 http.port: 9200
 http.cors.enabled: true
