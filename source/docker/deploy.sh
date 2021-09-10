@@ -4,8 +4,14 @@
 #scp -P 10022 mysql.tar.gz root@192.168.3.229:/var/data/docker
 #scp -P 10122 mysql.tar.gz root@192.168.3.229:/var/data/docker
 # Redis
-rm -rf redis.tar.gz
-tar cvf redis.tar.gz ./redis
-scp -P 10022 redis.tar.gz root@192.168.3.229:/var/data/docker
-scp -P 10122 redis.tar.gz root@192.168.3.229:/var/data/docker
-scp -P 10222 redis.tar.gz root@192.168.3.229:/var/data/docker
+#rm -rf redis.tar.gz
+#tar cvf redis.tar.gz ./redis
+#scp -P 10022 redis.tar.gz root@192.168.3.229:/var/data/docker
+#scp -P 10122 redis.tar.gz root@192.168.3.229:/var/data/docker
+#scp -P 10222 redis.tar.gz root@192.168.3.229:/var/data/docker
+# ElasticSearch
+rm -rf es.tar.gz
+tar cvf es.tar.gz ./elasticsearch
+scp -P 10022 es.tar.gz root@192.168.3.229:/var/data/docker
+scp -P 10122 es.tar.gz root@192.168.3.229:/var/data/docker
+scp -P 10222 es.tar.gz root@192.168.3.229:/var/data/docker
