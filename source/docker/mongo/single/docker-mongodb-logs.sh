@@ -1,3 +1,3 @@
 #!/bin/bash
 # docker logs [OPTIONS] CONTAINER
-docker logs -f mongo-single
+docker logs -f single.mongo.codepasser.io

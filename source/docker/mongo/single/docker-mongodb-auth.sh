@@ -1,6 +1,6 @@
 #!/bin/bash
 # docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
-docker exec -it mongo-single mongo admin -u admin -p Sa*963.-+
+docker exec -it single.mongo.codepasser.io mongo admin -u admin -p Sa*963.-+
 ## execute create user
 ##db.createUser({ user: 'root', pwd: 'Sa*963.-+', roles: [ { role: "root", db: "admin" } ] });
 ## execute create daemon
