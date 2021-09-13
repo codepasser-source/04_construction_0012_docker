@@ -1,4 +1,4 @@
-docker exec -it mongo-mongos-01 mongo daemon -u daemon -p cde3VFR$
+docker exec -it mongos1.mongo.codepasser.io mongo daemon -u daemon -p cde3VFR$
 sh.enableSharding("daemon")
 # Creation collection
 db.createCollection("sys_area")

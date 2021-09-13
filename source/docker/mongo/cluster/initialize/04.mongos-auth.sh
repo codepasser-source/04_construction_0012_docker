@@ -1,4 +1,4 @@
-docker exec -it mongo-mongos-01 mongo
+docker exec -it mongos1.mongo.codepasser.io mongo
 use admin
 # Creation root administrator
 db.createUser({ user: 'root', pwd: 'Sa*963.-+', roles: [ { role: "root", db: "admin" } ] });
