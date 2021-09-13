@@ -1,3 +1,3 @@
 #!/bin/bash
 # docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
-docker volume rm configsvr3.mongo.codepasser.io
+docker volume rm config3.mongo.codepasser.io

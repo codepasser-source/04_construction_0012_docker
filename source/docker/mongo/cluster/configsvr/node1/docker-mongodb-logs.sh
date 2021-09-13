@@ -1,3 +1,3 @@
 #!/bin/bash
 # docker logs [OPTIONS] CONTAINER
-docker logs -f configsvr1.mongo.codepasser.io
+docker logs -f config1.mongo.codepasser.io

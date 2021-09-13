@@ -1,3 +1,3 @@
 #!/bin/bash
 # docker inspect [OPTIONS] NAME|ID [NAME|ID...]
-docker inspect configsvr2.mongo.codepasser.io
+docker inspect config2.mongo.codepasser.io
