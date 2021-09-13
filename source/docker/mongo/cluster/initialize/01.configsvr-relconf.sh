@@ -3,9 +3,9 @@ config = {
     "_id":"replconf",
     "configsvr": true,
     "members":[
-      {"_id":0,host:"172.16.20.121:27001"},
-      {"_id":1,host:"172.16.20.121:27002"},
-      {"_id":2,host:"172.16.20.121:27003"}
+      {"_id":0,host:"config1.mongo.codepasser.io:27016"},
+      {"_id":1,host:"config2.mongo.codepasser.io:27016"},
+      {"_id":2,host:"config3.mongo.codepasser.io:27016"}
     ]
 }
 rs.initiate(config)
