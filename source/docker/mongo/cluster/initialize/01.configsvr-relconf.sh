@@ -1,4 +1,4 @@
-docker exec -it mongo-configsvr-01 mongo
+docker exec -it config1.mongo.codepasser.io mongo
 config = {
     "_id":"replconf",
     "configsvr": true,
