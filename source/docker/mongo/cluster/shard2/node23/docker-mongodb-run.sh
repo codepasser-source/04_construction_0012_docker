@@ -3,7 +3,7 @@
 docker run \
   --name shard23.mongo.codepasser.io \
   --network codepasser_overlay \
-  -p 27018:27017 \
+  -p 27019:27017 \
   -v $(pwd)/volume/config/mongod.conf:/etc/mongo/mongod.conf \
   -v $(pwd)/volume/configdb:/data/configdb \
   -v shard23.mongo.codepasser.io:/data/db \
