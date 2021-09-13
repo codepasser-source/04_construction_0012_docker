@@ -1,6 +1,6 @@
 docker exec -it mongo-mongos-01 mongo
-sh.addShard("shard1/172.16.20.121:27117,172.16.20.121:27127,172.16.20.121:27137")
-sh.addShard("shard2/172.16.20.121:27217,172.16.20.121:27227,172.16.20.121:27237")
-sh.addShard("shard3/172.16.20.121:27317,172.16.20.121:27327,172.16.20.121:27337")
+sh.addShard("shard1/shard11.mongo.codepasser.io:27018,shard12.mongo.codepasser.io:27018,shard13.mongo.codepasser.io:27018")
+sh.addShard("shard2/shard21.mongo.codepasser.io:27019,shard22.mongo.codepasser.io:27019,shard23.mongo.codepasser.io:27019")
+sh.addShard("shard3/shard31.mongo.codepasser.io:27020,shard32.mongo.codepasser.io:27020,shard33.mongo.codepasser.io:27020")
 ## 查看分片状态
 sh.status()
