@@ -19,5 +19,5 @@
 rm -rf mongo.tar.gz
 tar cvf mongo.tar.gz ./mongo
 scp -P 10022 mongo.tar.gz root@192.168.3.229:/var/data/docker
-#scp -P 10122 mongo.tar.gz root@192.168.3.229:/var/data/docker
-#scp -P 10222 mongo.tar.gz root@192.168.3.229:/var/data/docker
+scp -P 10122 mongo.tar.gz root@192.168.3.229:/var/data/docker
+scp -P 10222 mongo.tar.gz root@192.168.3.229:/var/data/docker
