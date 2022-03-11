@@ -2,7 +2,6 @@
 docker run \
 	--name node2.zookeeper.codepasser.io \
 	--net host \
-	-p 2181:2181 \
 	-v $(pwd)/volume/conf/zoo.cfg:/conf/zoo.cfg \
 	-v $(pwd)/volume/data:/data \
 	-v node2.zookeeper.codepasser.io:/datalog \
