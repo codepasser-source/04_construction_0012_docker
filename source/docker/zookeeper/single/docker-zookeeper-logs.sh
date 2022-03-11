@@ -1,2 +1,2 @@
 # docker logs [OPTIONS] CONTAINER
-docker logs -f zookeeper-master
+docker logs -f single.zookeeper.codepasser.io

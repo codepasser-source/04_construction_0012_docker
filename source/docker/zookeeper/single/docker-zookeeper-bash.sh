@@ -1,2 +1,2 @@
 # docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
-docker exec -it zookeeper-master bash
+docker exec -it single.zookeeper.codepasser.io bash
