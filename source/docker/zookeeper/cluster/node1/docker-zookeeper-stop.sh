@@ -1,4 +1,4 @@
 # docker stop [OPTIONS] CONTAINER [CONTAINER...]
-docker stop zookeeper-c
+docker stop node1.zookeeper.codepasser.io
 # docker rm [OPTIONS] CONTAINER [CONTAINER...]
-docker rm zookeeper-c
+docker rm node1.zookeeper.codepasser.io

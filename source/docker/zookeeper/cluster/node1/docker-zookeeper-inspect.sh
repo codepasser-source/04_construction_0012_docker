@@ -1,2 +1,2 @@
 # docker inspect [OPTIONS] NAME|ID [NAME|ID...]
-docker inspect zookeeper-a
+docker inspect node1.zookeeper.codepasser.io

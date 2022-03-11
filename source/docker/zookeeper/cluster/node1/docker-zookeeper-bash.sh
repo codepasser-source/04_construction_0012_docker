@@ -1,2 +1,2 @@
 # docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
-docker exec -it zookeeper-a bash
+docker exec -it node1.zookeeper.codepasser.io bash
