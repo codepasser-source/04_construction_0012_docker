@@ -1,4 +1,4 @@
 # docker stop [OPTIONS] CONTAINER [CONTAINER...]
-docker stop gogs-master
+docker stop gogs.codepasser.io
 # docker rm [OPTIONS] CONTAINER [CONTAINER...]
-docker rm gogs-master
+docker rm gogs.codepasser.io
