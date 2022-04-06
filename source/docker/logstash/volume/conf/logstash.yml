@@ -1,4 +1,4 @@
 # Logstash container
 http.host: "0.0.0.0"
 xpack.monitoring.enabled: false
-#xpack.monitoring.elasticsearch.hosts: [ "http://172.16.20.121:9201" ]
+#xpack.monitoring.elasticsearch.hosts: [ "http://node1.es.codepasser.io:9200", "http://node2.es.codepasser.io:9200", "http://node3.es.codepasser.io:9200" ]

@@ -25,5 +25,5 @@ filebeat.inputs:
     json.overwrite_keys: true
 
 output.logstash:
-  hosts: ["172.16.20.121:5044"]
+  hosts: ["172.16.20.141:5044"]
   loadbalance: true

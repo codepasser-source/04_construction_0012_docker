@@ -1,7 +1,7 @@
 # docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 docker run --privileged \
 	--name=iredmail-master \
-	--dns=172.16.20.121 \
+	--dns=172.16.20.141 \
 	-p 7000:80 \
 	-p 7443:443 \
 	-p 25:25 \

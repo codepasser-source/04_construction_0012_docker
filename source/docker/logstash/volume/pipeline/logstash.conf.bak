@@ -26,14 +26,14 @@ filter {
 output {
   if "web-oauth" in [tags] {
       elasticsearch {
-        hosts => [ "http://172.16.20.121:9201", "http://172.16.20.121:9202", "http://172.16.20.121:9203" ]
+        hosts => [ "http://node1.es.codepasser.io:9200", "http://node2.es.codepasser.io:9200", "http://node3.es.codepasser.io:9200" ]
         index => "web-oauth"
         manage_template => false
       }
   }
   if "service-base" in [tags] {
         elasticsearch {
-          hosts => [ "http://172.16.20.121:9201", "http://172.16.20.121:9202", "http://172.16.20.121:9203" ]
+          hosts => [ "http://node1.es.codepasser.io:9200", "http://node2.es.codepasser.io:9200", "http://node3.es.codepasser.io:9200" ]
           index => "service-base"
           manage_template => false
         }
