@@ -6,4 +6,4 @@ docker run \
   -p 8080:8080 \
   -v $(pwd)/volume/conf:/pulsar/conf \
   -v dashboard.pulsar.codepasser.io:/pulsar/data \
-  -d codepasser/pulsar bin/pulsar standalone
+  -d codepasser/pulsar-dashboard bin/pulsar standalone
