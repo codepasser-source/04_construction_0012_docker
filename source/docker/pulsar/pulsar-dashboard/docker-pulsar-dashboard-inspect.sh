@@ -1,2 +1,2 @@
 # docker inspect [OPTIONS] NAME|ID [NAME|ID...]
-docker inspect single.pulsar.codepasser.io
+docker inspect dashboard.pulsar.codepasser.io

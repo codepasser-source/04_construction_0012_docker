@@ -1,2 +1,2 @@
 # docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
-docker exec -it single.pulsar.codepasser.io bash
+docker exec -it dashboard.pulsar.codepasser.io bash
