@@ -2,8 +2,6 @@
 docker run \
   --name dashboard.pulsar.codepasser.io \
   --network codepasser_overlay \
-  -p 6650:6650 \
-  -p 8080:8080 \
-  -v $(pwd)/volume/conf:/pulsar/conf \
-  -v dashboard.pulsar.codepasser.io:/pulsar/data \
-  -d codepasser/pulsar-dashboard bin/pulsar standalone
+  -p 8081:80 \
+  -e SERVICE_URL=http://172.16.20.141:8080 \
+  -d codepasser/pulsar-dashboard
