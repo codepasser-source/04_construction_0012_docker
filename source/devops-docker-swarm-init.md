@@ -1,92 +1,75 @@
-## 创建overlay网络
+# PLATFORM
 
-> 初始化docker集群管理节点 
+## 配置Swarm Overlay 网络
 
-```shell script
-# 管理节点操作
-docker swarm init --advertise-addr 8.8.8.100
+> 初始化Swarm Overlay集群管理节点
+
+```shell
+docker swarm init --advertise-addr 10.0.2.61
 ```
 
-```shell script
+> 加入Swarm Overlay网络节点
+
+```shell
 # 工作节点操作
 # 查看工作加入token
 docker swarm join-token worker
-docker swarm join --token SWMTKN-1-2kke4rbao633z9d554cofss6jvvb8klbvbwq18rn8abdt1xvmg-19lovdl5t10abumpdv3kfyb9q 8.8.8.100:2377
+docker swarm join --token SWMTKN-1-2kke4rbao633z9d554cofss6jvvb8klbvbwq18rn8abdt1xvmg-19lovdl5t10abumpdv3kfyb9q 10.0.2.61:2377
 # 查看管理节点身份加入token
 docker swarm join-token manager
-docker swarm join --token SWMTKN-1-2kke4rbao633z9d554cofss6jvvb8klbvbwq18rn8abdt1xvmg-apg5k84m8w81mts8qfat32hm2 8.8.8.100:2377
+docker swarm join --token SWMTKN-1-2vfv7ayvyzo8or3awr584sym9vojemvhf4pbcdrf7nosqzkvqt-evplkol3bys60j09wx2nhjmiu 10.0.2.61:2377
 ```
 
-```shell script
-# 确认节点
-docker node ls
-ID                            HOSTNAME                  STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
-lyn7d3h0hxwgr3eyr7062difs *   devops100.codepasser.io   Ready     Active         Leader           20.10.8
-qei15atv8h13dfx5al39zklb9     devops101.codepasser.io   Ready     Active                          20.10.8
-```
+> 创建Swarm Overlay网络
 
-> 创建overlay网络(管理节点操作)
-
-```shell script
-# 创建overlay网络 允许动态添加（推荐）
+```shell
+# 允许动态添加 【注】网络命名为下划线，docker-compose project前缀fabric network:course
 docker network create --driver overlay --attachable codepasser_overlay
-# 创建overlay网络 允许动态添加+加密网络
+# 允许动态添加+加密网络
 docker network create --driver overlay --attachable --opt encrypted codepasser_overlay
 ```
 
-> 确认网络
+> 创建确认网络网络
 
-```shell script
-# 管理节点
+```shell
 docker network ls
-NETWORK ID     NAME                DRIVER    SCOPE
-9681c63cce7a   bridge              bridge    local
-j3t8t2s0qsnj   codepasser_overlay   overlay   swarm
-adca4f09b56b   docker_gwbridge     bridge    local
-4a6994fa805e   host                host      local
-nr4dr3ayr5et   ingress             overlay   swarm
-dc99cdfe3ed3   none                null      local
-# 工作节点 暂时看不到codepasser_overlay网络,当容器实例应用负载时才可见
-NETWORK ID     NAME              DRIVER    SCOPE
-b8c0a220e594   bridge            bridge    local
-3255702981c2   docker_gwbridge   bridge    local
-4a6994fa805e   host              host      local
-nr4dr3ayr5et   ingress           overlay   swarm
-dc99cdfe3ed3   none              null      local
 ```
-- [注意]
-
-    * 关闭防火墙
-    * 手动关闭后需要冲洗docker服务 systemctl restart docker.service 
 
 > 验证网络
 
-- [注] 确认宿主机DNS映射
-
-```shell script
+```shell
 docker pull busybox
 
-# 管理节点启动(8.8.8.100)
+# 管理节点启动(10.0.2.61)
 docker run -itd \
         --name c1 \
         --network codepasser_overlay \
         busybox
 
-# 工作节点启动(8.8.8.101)
+# 工作节点启动(10.0.2.62)
 docker run -itd \
         --name c2 \
+        --network codepasser_overlay \
+        busybox
+
+# 工作节点启动(10.0.2.63)
+docker run -itd \
+        --name c3 \
         --network codepasser_overlay \
         busybox
 
 # 查看启动结果
 docker ps -a
 
-# 进入容器
+# 进入容器 [注] DNS配置问题
 docker exec c1 ping -c 2 c2
 docker exec -it c1 sh
 
 docker exec c2 ping -c 2 c1
 docker exec -it c2 sh
+
+docker exec c3 ping -c 2 c1
+docker exec -it c3 sh
 ```
 
 > 环境清理
