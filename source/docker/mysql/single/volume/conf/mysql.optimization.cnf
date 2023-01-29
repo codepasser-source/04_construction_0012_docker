@@ -42,6 +42,7 @@ group_concat_max_len = 102400
 
 # Disabling symbolic-links is default,recommended to prevent assorted security risks
 #skip_symbolic_links            = yes
+skip_name_resolve               = yes
 
 [mysql]
 default-character-set           = utf8mb4
