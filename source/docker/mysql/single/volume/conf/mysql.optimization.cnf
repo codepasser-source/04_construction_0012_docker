@@ -17,7 +17,7 @@ character_set_server            = utf8mb4
 character_set_filesystem        = utf8mb4
 collation-server                = utf8mb4_general_ci
 
-lower_case_table_names          = 2
+lower_case_table_names          = 0
 max_connections                 = 1000
 wait_timeout                    = 604800
 interactive_timeout             = 604800
@@ -42,7 +42,7 @@ group_concat_max_len = 102400
 
 # Disabling symbolic-links is default,recommended to prevent assorted security risks
 #skip_symbolic_links            = yes
-skip_name_resolve               = yes
+skip_name_resolve               = ON
 
 [mysql]
 default-character-set           = utf8mb4
