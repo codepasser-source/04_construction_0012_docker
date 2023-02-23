@@ -8,7 +8,5 @@ docker run \
   -p 8302:8302 \
   -p 8500:8500 \
   -p 8600:8600 \
-  -dev \
-  -join single.consul.codepasser.io \
   -v single.consul.codepasser.io:/consul/data \
   -d codepasser/consul
