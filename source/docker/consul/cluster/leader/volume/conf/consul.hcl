@@ -1,9 +1,9 @@
-data_dir = /consul/data
-config_dir = /consul/config
+datacenter = "codepasser-cluster"
+data_dir = "/consul/data"
+log_level = "INFO"
+node_name = "leader"
 server = true
 ui = true
-datacenter = codepasser-cluster
-node=leader
 bootstrap_expect = 3
-retry_join = [leader.consul.codepasser.io, follower1.consul.codepasser.io, follower2.consul.codepasser.io]
-client_addr = leader.consul.codepasser.io
+retry_join = ["leader.consul.codepasser.io", "follower1.consul.codepasser.io", "follower2.consul.codepasser.io"]
+client_addr = "0.0.0.0"
