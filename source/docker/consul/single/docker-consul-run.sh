@@ -11,4 +11,4 @@ docker run \
   -p 8600:8600 \
   -e CONSUL_BIND_INTERFACE=eth0 \
   -v single.consul.codepasser.io:/consul/data \
-  -d codepasser/consul agent --server=true --bootstrap=true --ui=true --datacenter=codepasser-single --node=single --client=0.0.0.0
+  -d codepasser/consul agent --server=true --ui=true --bootstrap=true --datacenter=codepasser-single --node=single --client=0.0.0.0
