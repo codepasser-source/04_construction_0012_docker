@@ -1,5 +1,6 @@
 datacenter = "codepasser-cluster"
 data_dir = "/consul/data"
+encrypt = "b5Q7bb1OKdb3JWmwOy3nq6giEgvsmUViVKj8Xl8HW/g="
 log_level = "INFO"
 node_name = "follower1"
 server = true
