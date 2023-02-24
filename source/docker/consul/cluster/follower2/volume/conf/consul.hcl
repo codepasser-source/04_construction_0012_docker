@@ -1,0 +1,9 @@
+data_dir = /consul/data
+config_dir = /consul/config
+server = true
+ui = true
+datacenter = codepasser-cluster
+node=leader
+bootstrap_expect = 3
+retry_join = [leader.consul.codepasser.io, follower1.consul.codepasser.io, follower2.consul.codepasser.io]
+client_addr = follower2.consul.codepasser.io
