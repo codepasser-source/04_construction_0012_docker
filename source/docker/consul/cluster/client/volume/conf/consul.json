@@ -19,11 +19,11 @@
     "default_policy": "deny",
     "enable_token_persistence": true,
     "tokens": {
+      "master": "98f11539-2ca2-9679-6ae0-485e89de216f",
       "agent": "b0de771e-24ef-1606-16a0-35b182e1e5ad"
     }
   },
   "client_addr": "0.0.0.0",
-  "bootstrap_expect": 2,
   "retry_join": [
     "leader.consul.codepasser.io",
     "follower.consul.codepasser.io"
