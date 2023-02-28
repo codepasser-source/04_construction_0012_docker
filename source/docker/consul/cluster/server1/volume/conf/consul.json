@@ -27,10 +27,12 @@
   "bootstrap_expect": 1,
   "start_join": [
     "server1.consul.codepasser.io",
-    "server2.consul.codepasser.io"
+    "server2.consul.codepasser.io",
+    "server3.consul.codepasser.io"
   ],
   "retry_join": [
     "server1.consul.codepasser.io",
-    "server2.consul.codepasser.io"
+    "server2.consul.codepasser.io",
+    "server3.consul.codepasser.io"
   ]
 }
