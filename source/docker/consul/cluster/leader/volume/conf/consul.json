@@ -25,6 +25,10 @@
   },
   "client_addr": "0.0.0.0",
   "bootstrap_expect": 2,
+  "start_join": [
+    "leader.consul.codepasser.io",
+    "follower.consul.codepasser.io"
+  ],
   "retry_join": [
     "leader.consul.codepasser.io",
     "follower.consul.codepasser.io"

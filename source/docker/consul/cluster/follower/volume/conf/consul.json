@@ -23,10 +23,5 @@
       "agent": "b0de771e-24ef-1606-16a0-35b182e1e5ad"
     }
   },
-  "client_addr": "0.0.0.0",
-  "bootstrap_expect": 2,
-  "retry_join": [
-    "leader.consul.codepasser.io",
-    "follower.consul.codepasser.io"
-  ]
+  "client_addr": "0.0.0.0"
 }
