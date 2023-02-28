@@ -6,7 +6,7 @@
   "connect": {
     "enabled": true
   },
-  "node_name": "consul-leader",
+  "node_name": "consul-server1",
   "data_dir": "/consul/data",
   "enable_script_checks": false,
   "enable_local_script_checks": true,
@@ -26,11 +26,11 @@
   "client_addr": "0.0.0.0",
   "bootstrap_expect": 2,
   "start_join": [
-    "leader.consul.codepasser.io",
-    "follower.consul.codepasser.io"
+    "server1.consul.codepasser.io",
+    "server2.consul.codepasser.io"
   ],
   "retry_join": [
-    "leader.consul.codepasser.io",
-    "follower.consul.codepasser.io"
+    "server1.consul.codepasser.io",
+    "server2.consul.codepasser.io"
   ]
 }

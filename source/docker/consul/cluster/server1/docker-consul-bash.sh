@@ -1,3 +1,3 @@
 #!/bin/bash
 # docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
-docker volume rm leader.consul.codepasser.io
+docker exec -it server1.consul.codepasser.io sh
