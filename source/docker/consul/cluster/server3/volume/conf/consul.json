@@ -19,8 +19,8 @@
     "default_policy": "deny",
     "enable_token_persistence": true,
     "tokens": {
-      "master": "98f11539-2ca2-9679-6ae0-485e89de216f",
-      "agent": "b0de771e-24ef-1606-16a0-35b182e1e5ad"
+      "master": "708b66bb-43a6-71e9-f753-02be13d9ff3a",
+      "agent": "57710f15-b7dd-a28a-688b-9f1acc0bb3ee"
     }
   },
   "client_addr": "0.0.0.0"
