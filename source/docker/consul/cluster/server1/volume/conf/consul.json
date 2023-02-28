@@ -24,7 +24,7 @@
     }
   },
   "client_addr": "0.0.0.0",
-  "bootstrap_expect": 2,
+  "bootstrap_expect": 1,
   "start_join": [
     "server1.consul.codepasser.io",
     "server2.consul.codepasser.io"
