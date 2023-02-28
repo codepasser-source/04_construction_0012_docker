@@ -1,3 +1,3 @@
 #!/bin/bash
 # docker logs [OPTIONS] CONTAINER
-docker logs -f follower.consul.codepasser.io
+docker logs -f server2.consul.codepasser.io

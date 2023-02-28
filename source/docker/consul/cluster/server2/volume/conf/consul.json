@@ -6,7 +6,7 @@
   "connect": {
     "enabled": true
   },
-  "node_name": "consul-follower",
+  "node_name": "consul-server2",
   "data_dir": "/consul/data",
   "enable_script_checks": false,
   "enable_local_script_checks": true,
