@@ -23,5 +23,16 @@
       "agent": "57710f15-b7dd-a28a-688b-9f1acc0bb3ee"
     }
   },
-  "client_addr": "0.0.0.0"
+  "client_addr": "0.0.0.0",
+  "bootstrap_expect": 3,
+  "start_join": [
+    "server1.consul.codepasser.io",
+    "server2.consul.codepasser.io",
+    "server3.consul.codepasser.io"
+  ],
+  "retry_join": [
+    "server1.consul.codepasser.io",
+    "server2.consul.codepasser.io",
+    "server3.consul.codepasser.io"
+  ]
 }
