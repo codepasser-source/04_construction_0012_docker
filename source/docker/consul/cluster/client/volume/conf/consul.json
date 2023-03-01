@@ -10,6 +10,7 @@
   "data_dir": "/consul/data",
   "enable_script_checks": false,
   "enable_local_script_checks": true,
+  "disable_remote_exec": true,
   "log_level": "info",
   "log_rotate_bytes": 10485760,
   "log_rotate_duration": "24h",
@@ -19,13 +20,19 @@
     "default_policy": "deny",
     "enable_token_persistence": true,
     "tokens": {
-      "master": "98f11539-2ca2-9679-6ae0-485e89de216f",
-      "agent": "b0de771e-24ef-1606-16a0-35b182e1e5ad"
+      "master": "9f7759e6-b225-bd69-1e96-60edc3195cc1",
+      "agent": "be88184b-6918-a8ca-6f6a-0b94c273b775"
     }
   },
   "client_addr": "0.0.0.0",
+  "start_join": [
+    "server1.consul.codepasser.io",
+    "server2.consul.codepasser.io",
+    "server3.consul.codepasser.io"
+  ],
   "retry_join": [
-    "leader.consul.codepasser.io",
-    "follower.consul.codepasser.io"
+    "server1.consul.codepasser.io",
+    "server2.consul.codepasser.io",
+    "server3.consul.codepasser.io"
   ]
 }
