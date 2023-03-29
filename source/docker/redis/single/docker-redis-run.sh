@@ -3,6 +3,7 @@
 docker run \
   --name single.redis.codepasser.io \
   --network codepasser_overlay \
+  --restart=always \
   -p 6379:6379 \
   -v $(pwd)/volume/conf/redis.conf:/usr/local/etc/redis/redis.conf \
   -v single.redis.codepasser.io:/data \
