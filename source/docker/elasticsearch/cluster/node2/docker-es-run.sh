@@ -3,6 +3,7 @@
 docker run \
   --name node2.es.codepasser.io \
   --network codepasser_overlay \
+  --restart=always \
   -p 9200:9200 \
   -p 9300:9300 \
   -e "ES_JAVA_OPTS=-Xms1024m -Xmx1024m" \
