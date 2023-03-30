@@ -2,6 +2,7 @@
 docker run \
   --name single.zookeeper.codepasser.io \
   --network codepasser_overlay \
+  --restart=always \
   -p 2181:2181 \
   -v $(pwd)/volume/conf/zoo.cfg:/conf/zoo.cfg \
   -v single.zookeeper.codepasser.io:/data \
