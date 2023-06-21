@@ -4,11 +4,8 @@ docker run \
   --name single.consul.codepasser.io \
   --network codepasser_overlay \
   --restart=always \
-  -p 8300:8300 \
-  -p 8301:8301 \
-  -p 8302:8302 \
   -p 8500:8500 \
-  -p 8600:8600 \
   -e CONSUL_BIND_INTERFACE=eth0 \
   -v single.consul.codepasser.io:/consul/data \
-  -d codepasser/consul agent --server=true --ui=true --bootstrap=true --datacenter=codepasser-single --node=single --client=0.0.0.0
+  -v $(pwd)/volume/conf:/consul/config \
+  -d codepasser/consul agent
