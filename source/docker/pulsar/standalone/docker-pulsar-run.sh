@@ -8,4 +8,4 @@ docker run \
   -e PULSAR_PREFIX_advertisedAddress=standalone.pulsar.codepasser.io \
   -v standalone.pulsar.codepasser.io.conf:/pulsar/conf \
   -v standalone.pulsar.codepasser.io.data:/pulsar/data \
-  -d codepasser/pulsar bin/pulsar standalone
+  -d codepasser/pulsar sh -c "bin/apply-config-from-env.py conf/standalone.conf && bin/pulsar standalone"
