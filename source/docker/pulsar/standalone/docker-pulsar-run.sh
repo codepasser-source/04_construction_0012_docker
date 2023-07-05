@@ -2,6 +2,7 @@
 docker run \
   --name standalone.pulsar.codepasser.io \
   --network codepasser_overlay \
+  --restart=always \
   -p 6650:6650 \
   -p 8080:8080 \
   -v standalone.pulsar.codepasser.io.conf:/pulsar/conf \
