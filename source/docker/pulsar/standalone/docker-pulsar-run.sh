@@ -6,7 +6,6 @@ docker run \
   -p 6650:6650 \
   -p 8080:8080 \
   -e PULSAR_PREFIX_advertisedAddress=standalone.pulsar.codepasser.io \
-  -e PULSAR_PREFIX_advertisedAddress=standalone.pulsar.codepasser.io \
   -e PULSAR_PREFIX_authenticationEnabled=true \
   -e PULSAR_PREFIX_authenticationProviders=org.apache.pulsar.broker.authentication.AuthenticationProviderToken \
   -e PULSAR_PREFIX_authorizationEnabled=true \
