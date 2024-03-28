@@ -1,2 +1,2 @@
 # docker logs [OPTIONS] CONTAINER
-docker logs -f jenkins-master
+docker logs -f jenkins.codepasser.io
